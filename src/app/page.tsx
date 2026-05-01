@@ -3,6 +3,8 @@
 import React, { useState, useCallback } from "react";
 import { SplashScreen } from "@/components/animations/SplashScreen";
 import { LandingSection } from "@/components/sections/LandingSection";
+import { AboutSection } from "@/components/sections/AboutSection";
+import { ServicesSection } from "@/components/sections/ServicesSection";
 
 export default function Home() {
   const [splashDone, setSplashDone] = useState(false);
@@ -19,6 +21,12 @@ export default function Home() {
       <main className="flex flex-col min-h-screen">
         {/* Section 1 — Landing */}
         <LandingSection />
+
+        {/* Section 2 — About Us */}
+        <AboutSection />
+
+        {/* Section 3 — Services */}
+        <ServicesSection />
 
         {/* More sections will be added here */}
       </main>

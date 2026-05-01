@@ -56,7 +56,7 @@ export function LandingSection() {
       </nav>
 
       {/* ── Hero headline (top-left) ── */}
-      <div className="relative z-10 flex-1 flex flex-col justify-between px-8 pb-10 pt-10">
+      <div className="relative z-10 flex-1 flex flex-col justify-between px-8 pb-24 pt-10">
         {/* Big headline */}
         <div className="w-full">
           <motion.h1
