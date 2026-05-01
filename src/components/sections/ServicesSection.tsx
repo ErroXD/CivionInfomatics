@@ -9,7 +9,7 @@ export function ServicesSection() {
       className="relative w-full flex flex-col px-6 py-14 sm:px-12 sm:py-20"
       style={{
         minHeight: "100vh",
-        background: "linear-gradient(to bottom, #1a1b1b 0%, #e9573f 100%)",
+        background: "linear-gradient(to bottom, #1a1b1b 10%, #e9573f 100%)",
         zIndex: 10,
       }}
     >

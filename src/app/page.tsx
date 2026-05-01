@@ -5,6 +5,7 @@ import { SplashScreen } from "@/components/animations/SplashScreen";
 import { LandingSection } from "@/components/sections/LandingSection";
 import { AboutSection } from "@/components/sections/AboutSection";
 import { ServicesSection } from "@/components/sections/ServicesSection";
+import { ContactSection } from "@/components/sections/ContactSection";
 
 export default function Home() {
   const [splashDone, setSplashDone] = useState(false);
@@ -28,7 +29,8 @@ export default function Home() {
         {/* Section 3 — Services */}
         <ServicesSection />
 
-        {/* More sections will be added here */}
+        {/* Section 4 — Contact */}
+        <ContactSection />
       </main>
     </>
   );

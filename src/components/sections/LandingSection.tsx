@@ -7,7 +7,7 @@ export function LandingSection() {
     <section
       id="landing"
       className="relative w-full h-screen flex flex-col overflow-hidden"
-      style={{ background: "linear-gradient(180deg, #121313 0%, #1e1514 35%, #7a2d21 75%, #FF6044 100%)" }}
+      style={{ background: "linear-gradient(180deg, #121313 10%, #FF6044 100%)" }}
     >
       {/* ── Navbar ── */}
       <nav className="relative z-10 flex items-center justify-between px-8 pt-7 pb-4">
