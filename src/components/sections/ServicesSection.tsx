@@ -18,7 +18,7 @@ const SERVICES: Service[] = [
     title: "App Development",
     src: "/images/hand-holding-phone.png",
     alt: "Hand holding a smartphone showing a finance app UI",
-    cardClass: "md:col-start-1 md:row-start-1",
+    cardClass: "md:col-start-1 md:row-start-1 md:-translate-x-14",
     imgClass:
       "pointer-events-none absolute -right-3 sm:-right-5 bottom-0 h-[165%] w-auto object-contain drop-shadow-[0_25px_40px_rgba(0,0,0,0.55)]",
     delay: 0,
@@ -28,7 +28,7 @@ const SERVICES: Service[] = [
     src: "/images/openclaw.png",
     alt: "Friendly red robot mascot representing AI automation",
     cardClass:
-      "md:col-start-2 md:row-start-1 md:row-span-2 md:self-center overflow-visible",
+      "md:col-start-2 md:row-start-1 md:row-span-2 md:self-center md:translate-x-16 overflow-visible",
     imgClass:
       "pointer-events-none absolute max-w-none w-auto object-contain -right-[10.5rem] sm:-right-[16rem] top-1/2 -translate-y-[52%] h-[210%] sm:h-[230%] drop-shadow-[0_25px_40px_rgba(0,0,0,0.55)]",
     delay: 0.1,
@@ -37,7 +37,7 @@ const SERVICES: Service[] = [
     title: "Web Development",
     src: "/images/code.png",
     alt: "Laptop showing a code editor",
-    cardClass: "md:col-start-1 md:row-start-2 overflow-visible",
+    cardClass: "md:col-start-1 md:row-start-2 md:-translate-x-14 md:translate-y-12 overflow-visible",
     imgClass:
       "pointer-events-none absolute max-w-none w-auto object-contain -right-[6rem] sm:-right-[10rem] top-1/2 -translate-y-[55%] h-[140%] sm:h-[155%] drop-shadow-[0_30px_45px_rgba(0,0,0,0.55)]",
     delay: 0.2,
@@ -93,14 +93,26 @@ export function ServicesSection() {
                 </h3>
               </div>
 
-              <Image
-                src={s.src}
-                alt={s.alt}
-                width={600}
-                height={600}
-                priority={s.delay === 0}
+              <motion.div
                 className={s.imgClass}
-              />
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: false, amount: 0.35 }}
+                transition={{
+                  duration: 1.2,
+                  delay: s.delay * 0.4,
+                  ease: [0.16, 1, 0.3, 1],
+                }}
+              >
+                <Image
+                  src={s.src}
+                  alt={s.alt}
+                  width={600}
+                  height={600}
+                  priority={s.delay === 0}
+                  className="h-full w-full object-contain"
+                />
+              </motion.div>
             </motion.div>
           ))}
         </div>
